@@ -5,14 +5,13 @@
   <head>
     <title>Flixter</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <div id="flex-content-container"
+      <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="#">Flixter</a>
@@ -41,15 +40,24 @@
   </div>
 </nav>
 
-<% if notice.present? %>
- <p class="alert alert-info"><%= notice %></p>
-<% end %>
+  <% if notice.present? %>
+   <p class="alert alert-info"><%= notice %></p>
+  <% end %>
 
-<% if alert.present? %>
- <p class="alert alert-danger"><%= alert %></p>
-<% end %>
+  <% if alert.present? %>
+   <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
 
-<%= yield %>
+  <%= yield %>
+</div>
 
+    <div id="footer">
+      <div class="container">
+        <b>Footer Here</b>
+        <br />
+        <%= link_to 'Link', '#' %>
+      </div>
+    </div>
   </body>
 </html>
+  
